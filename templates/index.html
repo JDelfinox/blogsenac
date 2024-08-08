@@ -1,4 +1,4 @@
-{% load static %}
+{% load static%}
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -27,7 +27,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'index' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'postar' %}">Postar</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'about' %}">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'contato' %}">Contato</a></li>
                     </ul>
@@ -35,7 +35,7 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaZR935F7M1sJMaXizV9NudxiEdM9jk4fX2Q&s')">
+        <header class="masthead" style="background-image:url('{% static 'assets/img/images.png'%}'); background-size: 1920px 760px; background-position: center;">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
@@ -53,12 +53,12 @@
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="post.html">
+                        <a href="{% url 'post1' %}">
                             <h2 class="post-title">Os Melhores Cursos e Banco de Oportunidades, Você encontra aqui!!!</h2>
                             <h3 class="post-subtitle">Procure o Curso que é a sua cara.</h3>
                         </a>
                         <p class="post-meta">
-                            Posted by
+                            Postado por
                             <a href="#!">Equipe Senac</a>
                             em 05 de Agosto, 2024
                         </p>
@@ -67,9 +67,9 @@
                     <hr class="my-4" />
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="post.html"><h2 class="post-title">DLJ aprova 2 Projetos do Senac-Parnaíba</h2></a>
+                        <a href="{% url 'post2' %}"><h2 class="post-title">DLJ aprova 2 Projetos do Senac-Parnaíba</h2></a>
                         <p class="post-meta">
-                            Posted by
+                            Postado por
                             <a href="#!">Equipe Senac</a>
                             em 05 de Agosto, 2024
                         </p>
@@ -78,12 +78,12 @@
                     <hr class="my-4" />
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="post.html">
+                        <a href="{% url 'post3' %}">
                             <h2 class="post-title">Sala de Tecnico de Informática para Internet reúne as maiores peças em uma única Sala.</h2>
                             <h3 class="post-subtitle">Entenda o porquê.</h3>
                         </a>
                         <p class="post-meta">
-                            Posted by
+                            Postado por 
                             <a href="#!">Tecnicos em Informática para Internet</a>
                             em 05 de Agosto, 2024
                         </p>
@@ -92,12 +92,12 @@
                     <hr class="my-4" />
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="post.html">
+                        <a href="{% url 'post4' %}">
                             <h2 class="post-title">Não sabe em qual time apostar?</h2>
                             <h3 class="post-subtitle">Alunos do Curso de Tecnico de Informática para internet criam site de apostas 100% eficaz e com retorno imediato .</h3>
                         </a>
                         <p class="post-meta">
-                            Posted by
+                            Postado por
                             <a href="#!">Tecnicos em Informática para Internet</a>
                             em 05 de Agosto, 2024
                         </p>

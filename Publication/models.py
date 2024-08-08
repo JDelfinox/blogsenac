@@ -9,4 +9,5 @@ class Publication(models.Model):
     
     class Meta:
         db_table = 'publications'
+        
 

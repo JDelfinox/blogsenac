@@ -35,13 +35,13 @@
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image:url('{% static 'assets/img/phone.jpg'%}'); background-size: 1920px 560px; background-position: center;">
+        <header class="masthead" style="background-image:url('{% static 'assets/img/phone.jpg'%}'); background-size: 1920px 660px; background-position: center;">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="page-heading">
-                            <h1>Contato<h1>
-                            <span class="subheading">Alguma Dúvida? Mande Para nós.</span>
+                            <h1>Faça sua Postagem <h1>
+                            <span class="subheading">Compartilhe para Todos sua Notícia.</span>
                         </div>
                     </div>
                 </div>
@@ -52,8 +52,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>Quer tirar sua Dúvida?</p> 
-                        <p>Preencha o formulário abaixo para nos enviar uma mensagem e entraremos em contato com você o mais breve possível!</p>
+                        <p>Chegou sua hora de Compartilhar sua Noticia!</p> 
                         <div class="my-5">
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -69,21 +68,21 @@
                                     <div class="invalid-feedback" data-sb-feedback="name:required">Preenchimento é Obrigatório.</div>
                                 </div>
                                 <div class="form-floating">
-                                    <input class="form-control" id="email" type="email" placeholder="Coloque seu Email..." data-sb-validations="required,email" />
-                                    <label for="email">Email </label>
+                                    <input class="form-control" id="name" type="text" placeholder="Coloque seu Email..." data-sb-validations="required,email" />
+                                    <label for="email">Titulo </label>
                                     <div class="invalid-feedback" data-sb-feedback="email:required">Preenchimento é Obrigatório.</div>
-                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email Inválido.</div>
-                                </div>
-                                <div class="form-floating">
-                                    <input class="form-control" id="phone" type="tel" placeholder="Coloque seu Número de Telefone..." data-sb-validations="required" />
-                                    <label for="phone">Número de Telefone</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">Preenchimento é Obrigatório.</div>
                                 </div>
                                 <div class="form-floating">
                                     <textarea class="form-control" id="message" placeholder="Digite sua Dúvida" style="height: 12rem" data-sb-validations="required"></textarea>
                                     <label for="message">Mensagem</label>
                                     <div class="invalid-feedback" data-sb-feedback="message:required">Preenchimento é Obrigatório.</div>
                                 </div>
+                                <div class="form-group">
+                                    <label for="midia">Escolha uma Mídia</label>
+                                    <input type="file" id="midia" name="midia" required="false">
+                                    <small class="form-text text-muted">Selecione uma imagem ou vídeo para acompanhar sua postagem.</small>
+                                </div>
+                                
                                 <br />
                                 <!-- Submit success message-->
                                 <!---->
@@ -92,10 +91,10 @@
                                 <div class="d-none" id="submitSuccessMessage">
                                     <div class="text-center mb-3">
                                         <div class="fw-bolder">Formulário enviado com Sucesso.</div>
-                                        To activate this form, sign up at
                                         <br />
                                         <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                                     </div>
+                            
                                 </div>
                                 <!-- Submit error message-->
                                 <!---->
