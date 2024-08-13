@@ -29,7 +29,7 @@
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'about' %}">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'contato' %}">Contato</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'entrar' %}">Entrar</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'index' %}">Voltar</a></li>
                     </ul>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
-                            <h1> Blog Senac</h1>
+                            <h1>  Cadastro</h1>
                             <span class="subheading">Tudo sobre o Senac, Você encontra aqui!!!</span>
                         </div>
                     </div>
@@ -51,61 +51,41 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="{% url 'post1' %}">
-                            <h2 class="post-title">Os Melhores Cursos e Banco de Oportunidades, Você encontra aqui!!!</h2>
-                            <h3 class="post-subtitle">Procure o Curso que é a sua cara.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Postado por
-                            <a href="#!">Equipe Senac</a>
-                            em 05 de Agosto, 2024
-                        </p>
+                    {% block content %}
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4 offset-md-4" style="text-align: center;">
+                                
+                                <form>
+                                    <div class="form-group">
+                                        <label for="username">Nome de Usuário:</label>
+                                        <input type="text" id="username" name="username" class="form-control">
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="username">Email do Usuário:</label>
+                                        <input type="email" id="eamil" name="username" class="form-control">
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="password">Digite sua Senha:</label>
+                                        <input type="password" id="password" name="senha" class="form-control">
+                                    </div>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="password">Confirme sua Senha:</label>
+                                        <input type="password" id="password" name="senha" class="form-control">
+                                    </div>
+                                    <br>
+                                    <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+                                    <br>
+                                </form>     
+                                <br>
+                                <a> Já tem uma Conta?<a href='{% url "entrar" %}'> Faça o Login</a></a>
+                            </div>
+                        </div>
                     </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="{% url 'post2' %}"><h2 class="post-title">DLJ aprova 2 Projetos do Senac-Parnaíba</h2></a>
-                        <p class="post-meta">
-                            Postado por
-                            <a href="#!">Equipe Senac</a>
-                            em 05 de Agosto, 2024
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="{% url 'post3' %}">
-                            <h2 class="post-title">Sala de Tecnico de Informática para Internet reúne as maiores peças em uma única Sala.</h2>
-                            <h3 class="post-subtitle">Entenda o porquê.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Postado por 
-                            <a href="#!">Tecnicos em Informática para Internet</a>
-                            em 05 de Agosto, 2024
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="{% url 'post4' %}">
-                            <h2 class="post-title">Não sabe em qual time apostar?</h2>
-                            <h3 class="post-subtitle">Alunos do Curso de Tecnico de Informática para internet criam site de apostas 100% eficaz e com retorno imediato .</h3>
-                        </a>
-                        <p class="post-meta">
-                            Postado por
-                            <a href="#!">Tecnicos em Informática para Internet</a>
-                            em 05 de Agosto, 2024
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+                    {% endblock %}
                 </div>
             </div>
         </div>
