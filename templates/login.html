@@ -1,0 +1,33 @@
+{% load static %}
+{% block content %}
+<title>Login</title>
+<link href="{% static 'css/login.css' %}" rel="stylesheet"/>
+<header>
+
+</header>
+<body class="img" style="background-image: url('{% static 'assets/img/fundo.jpg'%}')">
+</body>
+<div class="log">
+  <div class="item-log">
+  <h1>LOGIN</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+      <div class="form-group">
+        {{ form.identifier }}
+      </div>
+      <br>
+      <div class="form-group">
+        {{ form.password }}
+      </div>
+      <br>
+      <button class="btn" type="submit">Login</button>
+      <br>
+      <a href="">Esqueceu sua senha?</a>
+      <br>
+      <br>
+      <a class="bt1" href="{% url 'signup' %}">Criar uma Conta</a>
+    </form>
+  </div>
+</div>
+{% endblock %}

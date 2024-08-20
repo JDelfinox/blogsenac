@@ -1,0 +1,38 @@
+{% load static %}
+{% block content %}
+<title>Sign Up</title>
+<link href="{% static 'css/login.css' %}" rel="stylesheet"/>
+<header>
+  <p>Aries studios</p>
+</header>
+<body class="img" style="background-image: url('{% static 'assets/img/fundo.jpg'%}')">
+</body>
+<div class="log">
+  <div class="item-log">
+  <h1>Sign Up</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+      <div class="form-group">
+        {{ form.username }}
+      </div>
+      <br>
+      <div class="form-group">
+        {{ form.email }}
+      </div>
+      <br>
+      <div class="form-group">
+        {{ form.password1 }}
+      </div>
+      <br>
+      <div class="form-group">
+        {{ form.password2 }}
+      </div>
+      <br>
+      <button class="btn" type="submit">Register</button>
+      <br>
+      <a href="{% url 'login' %}">Already have an account? Login</a>
+    </form>
+  </div>
+</div>
+{% endblock %}
