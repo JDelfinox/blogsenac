@@ -1,0 +1,8 @@
+{% block content %}
+  <h1>Criar Postagem</h1>
+  <form method="post">
+    {% csrf_token %}
+    <textarea name="mensagem" cols="30" rows="10"></textarea>
+    <button type="submit">Postar</button>
+  </form>
+{% endblock %}

@@ -37,4 +37,7 @@ def logout(request):
 def indexbase(request):
     return render(request, 'indexbase.html')
 
+def criar_postagem(request):
+    return render(request, "criar_postagem.html")
+
     

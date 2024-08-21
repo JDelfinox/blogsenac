@@ -30,7 +30,7 @@
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'index' %}">Home</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'about' %}">Sobre</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'contato' %}">Contato</a></li>
-                        <li class="nav-item" style='background-color: blue'><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'index' %}">Criar Publicação</a></li>
+                        <li class="nav-item" style='background-color: blue'><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'criar_postagem' %}">Criar Publicação</a></li>
                         
                         <li class="nav-item" style='background-color: red'><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'logout' %}">Sair</a></li>
                     </ul>
@@ -54,61 +54,14 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="{% url 'post1' %}">
-                            <h2 class="post-title">Os Melhores Cursos e Banco de Oportunidades, Você encontra aqui!!!</h2>
-                            <h3 class="post-subtitle">Procure o Curso que é a sua cara.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Postado por
-                            <a href="#!">Equipe Senac</a>
-                            em 05 de Agosto, 2024
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="{% url 'post2' %}"><h2 class="post-title">DLJ aprova 2 Projetos do Senac-Parnaíba</h2></a>
-                        <p class="post-meta">
-                            Postado por
-                            <a href="#!">Equipe Senac</a>
-                            em 05 de Agosto, 2024
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="{% url 'post3' %}">
-                            <h2 class="post-title">Sala de Tecnico de Informática para Internet reúne as maiores peças em uma única Sala.</h2>
-                            <h3 class="post-subtitle">Entenda o porquê.</h3>
-                        </a>
-                        <p class="post-meta">
-                            Postado por 
-                            <a href="#!">Tecnicos em Informática para Internet</a>
-                            em 05 de Agosto, 2024
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="{% url 'post4' %}">
-                            <h2 class="post-title">Não sabe em qual time apostar?</h2>
-                            <h3 class="post-subtitle">Alunos do Curso de Tecnico de Informática para internet criam site de apostas 100% eficaz e com retorno imediato .</h3>
-                        </a>
-                        <p class="post-meta">
-                            Postado por
-                            <a href="#!">Tecnicos em Informática para Internet</a>
-                            em 05 de Agosto, 2024
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+                    {% for publication in publications %}
+                        <h2>{{ publication.usuario.author }} disse:</h2>
+                        <p>{{ publication.pub_text }}</p>
+                        <p>Data de criação: {{ publication.date_publication }}</p>
+                        <hr>
+                    {% empty %}
+                        <p>Nenhuma postagem encontrada.</p>
+                    {% endfor %}
                 </div>
             </div>
         </div>
